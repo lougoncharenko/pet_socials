@@ -1,42 +1,29 @@
 import React from 'react';
-import { NavLink} from 'react-router-dom';
-import './Navbar.css'
-import {Container, Row} from 'reactstrap'
-
-
 
 const Header = () => {
   
   return (
-    <header className='header'>
-      <Container>
-        <Row>
-          <div className="nav_wrapper">
-           
-              <div className="navigation">
-                <ul className="menu">
-                  <li className="nav_item">
-                    <NavLink to='home'>Home</NavLink>
-                  </li>
-                  <li className="nav_item">
-                    <NavLink to='newPost'>New Post</NavLink>
-                  </li>
-                  <li className="nav_item">
-                    <NavLink to='newComment'>New Comment</NavLink>
-                  </li>
-                  <li className="nav_item">
-                    <NavLink to='login'>login</NavLink>
-                  </li>
-                  <li className="nav_item">
-                    <NavLink to='signup'>sign up</NavLink>
-                  </li>
-                </ul>
-              </div>
-          </div>
-        </Row>
-      </Container>
-    </header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">Pet Socials</a>
+    
+    <div class="nav navbar-nav navbar-left" >
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <li><a href="/home" class="me-2">Home</a></li>
+        <li><a href="/newPost" class="me-2">New Post</a></li>
+        <li><a href="/newComment" class="me-2">New Comment</a></li>
+      </ul>
+    </div>
+    <ul class="nav navbar-nav navbar-right">
+        <li><a href="/logout" class="me-2">Logout</a></li>
+        <li><a href="/login" class="me-2">Login</a></li>
+        <li><a href="/signup" class="me-2">Sign Up</a></li>
+    </ul>
+  </div>
+</nav>
   );
 }
 
 export default Header;
+
+    

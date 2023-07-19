@@ -18,9 +18,19 @@ mongoose.connect('mongodb://127.0.0.1:27017/database', {
     .then(()=> console.log('Connected to DB'))
     .catch(console.error);
 
+
+//Controllers
+require('./controllers/posts')(app);
+require('./controllers/comments.js')(app);
+require('./controllers/auth.js')(app);
+
+
+const Post = require('./models/Posts')
+
 app.get("/api", (req,res) => {
     res.json({"posts": [{title: "postOne"}, {title:"postTwo"}, {title:"postThree"}]})
 })
+
 
 
 app.listen(4001, () => {
