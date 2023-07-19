@@ -1,7 +1,9 @@
 {
   "dependencies": {
     "cors": "^2.8.5",
-    "mongoose": "^7.3.4"
+    "mongoose": "^7.3.4",
+    "react-strap": "^0.0.1",
+    "reactstrap": "^9.2.0"
   },
   "devDependencies": {
     "react-router-dom": "^6.14.1"
